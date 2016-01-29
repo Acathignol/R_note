@@ -21,15 +21,11 @@ anova(lm(notes~etu))
 pValues<-c()
 count=0
 for (i in 1:30){
-  count+=1
+  count=count+1
   for(j in 1:30){
-    t.test(x, y = NULL,
-           alternative = c("two.sided", "less", "greater"),
-           mu = 0, paired = FALSE, var.equal = FALSE,
-           conf.level = 0.95, ...)
+    t.test(etu)
     pValues[count]<-pvalue
-    count+=1
-  }
+    count=count+1}
 }#SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE how to do
 
 
